@@ -1,0 +1,155 @@
+* {
+  font-family: Georgia, serif;
+}
+body {
+  background-color: #4D7EA8;
+  
+}
+
+.experience-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 30%;
+  margin-right: 50px;
+}
+
+.slider-item {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.slider-item.active {
+  border-color: black;
+}
+
+.job-summary {
+  width: 70%;
+}
+
+.job-summary h2 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.job-summary p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.job-summary ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.job-summary li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+
+/* Project Section */
+
+.project-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.project-img {
+  width: 50%;
+  margin-right: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-img img {
+  width: 100%;
+  max-height: 30rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.tech-item {
+  font-size: 1.5rem;
+  background-color: #F7F7F7;
+  color: #333333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  background-color: transparent;
+  border: 2px solid #333333;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}
