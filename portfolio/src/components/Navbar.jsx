@@ -4,13 +4,14 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav id="navbvar">
+    <nav id="navbvar" className='navbar'>
       <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/experience">Experience</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><button id="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</button></li>
+        <li><a className='nav-item' href="#about">About</a></li>
+        <li className='nav-item'><a className='nav-item' href="#experience">Experience</a></li>
+        <li className='nav-item'><a className='nav-item' href="#projects">Projects</a></li>
+        <li className='nav-item'><a className='nav-item' href="#contact">Contact</a></li>
+        
+        <li className='nav-item'><button id="resume-button" className='resume-button' href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</button></li>
       </ul>
     </nav>
   );

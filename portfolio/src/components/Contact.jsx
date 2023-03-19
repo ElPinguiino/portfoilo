@@ -25,7 +25,9 @@ const Contact = () => {
           Message:
           <textarea value={message} onChange={event => setMessage(event.target.value)} />
         </label>
+        
         <button type="submit">Submit</button>
+        
       </form>
     );
 }
