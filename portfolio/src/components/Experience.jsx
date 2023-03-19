@@ -41,25 +41,25 @@ const Experience = () => {
     }
   
     return (
-      <div className="experience-section">
+      <article className="experience-section">
         <div className="slider">
           {jobs.map((job, index) => (
             <div key={index} className={`slider-item ${index === activeJob ? 'active' : ''}`} onClick={() => handleJobClick(index)}>
-              <h3>{job.company}</h3>
-              <p>{job.time}</p>
+              <p>{job.company}</p>
             </div>
           ))}
         </div>
         <div className="job-summary">
-          <h2>{jobs[activeJob].title}</h2>
-          <p>{jobs[activeJob].time}</p>
+          <p className='job-title'>{jobs[activeJob].title}</p>
+          <p className='job-company'>{jobs[activeJob].company}</p>
+          <p className='job-time'>{jobs[activeJob].time}</p>
           <ul>
             {jobs[activeJob].summary.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
           </ul>
         </div>
-      </div>
+      </article>
     )
 }
 

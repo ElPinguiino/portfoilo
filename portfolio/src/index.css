@@ -2,8 +2,22 @@
   font-family: Georgia, serif;
 }
 body {
-  background-color: #4D7EA8;
+  background-color: black;
   
+}
+
+.navbar {
+  justify-content: flex-end;
+
+}
+
+.nav-item {
+  color: white
+}
+
+.resume-button {
+  background-color: transparent;
+  border-color: white;
 }
 
 .experience-section {
@@ -21,7 +35,6 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   width: 30%;
-  margin-right: 50px;
 }
 
 .slider-item {
@@ -34,11 +47,18 @@ body {
 }
 
 .slider-item.active {
-  border-color: black;
+  border-color: gold;
 }
 
+.job-title {
+  color: red;
+  font-size: 8px;
+  font-family: Georgia, serif;
+}
+
+
 .job-summary {
-  width: 70%;
+  width: 100%;
 }
 
 .job-summary h2 {
