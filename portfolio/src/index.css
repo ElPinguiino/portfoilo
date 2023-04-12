@@ -1,6 +1,17 @@
-* {
-  font-family: Georgia, serif;
+@font-face {
+  font-family: 'agustina';
+  src: url('agustina.ttf');
 }
+
+* {
+
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px;
+}
+
 body {
   background-color: black;
   
@@ -9,6 +20,10 @@ body {
 .navbar {
   justify-content: flex-end;
 
+}
+
+.site-logo {
+  font-family: "agustina";
 }
 
 .nav-item {
@@ -29,19 +44,32 @@ body {
   margin-top: 50px;
 }
 
+@media (max-width: 767px) {
+  .experience-section {
+    flex-wrap: wrap;
+  }
+}
+
 .slider {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 30%;
+  width: 45%;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .slider-item {
   cursor: pointer;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 2px solid #ddd;
+  width: 33%;
+
   border-radius: 5px;
   transition: all 0.3s ease;
 }
@@ -53,7 +81,7 @@ body {
 .job-title {
   color: red;
   font-size: 8px;
-  font-family: Georgia, serif;
+  font-family: "Georgia, serif";
 }
 
 
@@ -97,6 +125,37 @@ body {
   display: flex;
   width: 100%;
   margin-bottom: 5rem;
+}
+
+.project-section-container {
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: transparent;
+  backdrop-filter: blur(10px); /* Adjust the blur value as desired */
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity value as desired */
+}
+
+.github-link {
+  color: red;
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.github-link:hover {
+  color: black
+}
+
+.site-link {
+  color: red;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.site-link:hover {
+  color: black;
 }
 
 .project-img {
