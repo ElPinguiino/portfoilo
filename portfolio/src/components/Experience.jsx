@@ -41,7 +41,9 @@ const Experience = () => {
     }
   
     return (
-      <article className="experience-section">
+      <>
+        <h2 className="section-heading">Experience</h2>
+      <article className="experience-section" id="experience">
         <div className="slider">
           {jobs.map((job, index) => (
             <div key={index} className={`slider-item ${index === activeJob ? 'active' : ''}`} onClick={() => handleJobClick(index)}>
@@ -60,6 +62,7 @@ const Experience = () => {
           </ul>
         </div>
       </article>
+      </>
     )
 }
 

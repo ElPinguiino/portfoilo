@@ -12,7 +12,10 @@ const Contact = () => {
     }
   
     return (
-      <form onSubmit={handleSubmit}>
+      <>
+      <h2 className="section-heading">Contact</h2>
+      <article id="contact">
+        <form onSubmit={handleSubmit}>
         <label>
           Name:
           <input type="text" value={name} onChange={event => setName(event.target.value)} />
@@ -25,10 +28,10 @@ const Contact = () => {
           Message:
           <textarea value={message} onChange={event => setMessage(event.target.value)} />
         </label>
-        
-        <button type="submit">Submit</button>
-        
+        <button type="submit">Submit</button>  
       </form>
+      </article>
+      </>
     );
 }
 

@@ -8,6 +8,7 @@ const Landing = () => {
         <p>
             I am a Software Engineer with a background in IT Support and Administration.
         </p>
+        <img src="avatar.png" alt="Project 1" className="img-fluid" />
     </section>
   )
 }

@@ -9,6 +9,9 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Landing from './components/Landing'
 import About from './components/About'
+import { Route, Routes } from "react-router-dom"
+import Home from './pages/Home'
+import Playground from './pages/Playground'
 
 
 function App() {
@@ -17,13 +20,10 @@ function App() {
   return (
     <>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css"></link>
-      <Navbar />
-      <Landing name="home"/>
-      <About name="about" />
-      <Experience name="experience"/>
-      <Projects name="projects"/>
-      <Contact name="contact"/>
-      <Footer />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/ai-playground" element={<Playground />} />
+    </Routes>
     </>
   )
 }

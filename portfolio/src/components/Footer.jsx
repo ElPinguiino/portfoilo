@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer>
-        <small>Juan J. Aguilera</small>
+        <small><a href="/ai-playground">Juan J. Aguilera</a></small>
     </footer>
   );
 };
