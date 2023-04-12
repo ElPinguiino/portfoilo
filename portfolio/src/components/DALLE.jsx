@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import axios from 'axios';
 
 const DALLE = () => {
-    const [gptResponse, setGptResponse] = useState([])
+    const [firstImage, setFirstImage] = useState([])
+    const [secondImage, setSecondImage] = useState([])
     const [message, setMessage] = useState("")
 
   const handleSubmit = async (e) => {
@@ -19,7 +20,7 @@ const DALLE = () => {
     }).then((response) => {
       console.log(response.data);
       console.log(response.data.data[0].url)
-      setGptResponse(response.data.data[0].url)
+      setFirstImage(response.data.data[0].url)
     }).catch(error => console.error(error));
   }
 
@@ -42,8 +43,11 @@ const DALLE = () => {
       </article>
       
       <article>
-        <img src={gptResponse} alt="first-image" />
+        <img src={firstImage} alt="first-image" />
       </article>
+      {/* <article>
+        <img src={secondImage} alt="first-image" />
+      </article> */}
     </section>
   )
 }

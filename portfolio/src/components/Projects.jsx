@@ -29,8 +29,8 @@ const Projects = () => (
           <p>Project created for a Tattoo Artist website that wanted a funnel for people to contact her and submit consultations. Instagram API was integrated in order to display their work as their portfolio. Future iterations of the site will be able to fully manage booking appointment and paying for them through the site.</p>
           <p>Technologies used: React, Django, DRF, PostgreSQL, Instagram API</p>
           <p>Deployed with: Docker, Gunicorn, Nginx on a Linode VPS</p>
-          <a href="https://github.com/esmoquin/sj_front" target="_blank" rel="noopener noreferrer" className="btn btn-primary"><VscGithubAlt></VscGithubAlt></a>
-          <a href="https://stephaniejohnson.tattoo" target="_blank" rel="noopener noreferrer" className="btn btn-secondary"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+          <a className="github-link" href="https://github.com/esmoquin/sj_front" target="_blank" rel="noopener noreferrer"><VscGithubAlt></VscGithubAlt></a>
+          <a className="site-link" href="https://stephaniejohnson.tattoo" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
         </div>
       </article>
       <article className="project-card">
@@ -41,8 +41,8 @@ const Projects = () => (
           <h3>Social Tiles</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum odio eget massa venenatis, quis ullamcorper orci finibus.</p>
           <p>Technologies used: Python, Django, PostgreSQL</p>
-          <a href="https://github.com/myusername/project3" target="_blank" rel="noopener noreferrer" className="btn btn-primary"><VscGithubAlt></VscGithubAlt></a>
-          <a href="https://www.project3.com/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+          <a className="github-link" href="https://github.com/myusername/project3" target="_blank" rel="noopener noreferrer"><VscGithubAlt></VscGithubAlt></a>
+          <a className="site-link" href="https://www.project3.com/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
         </div>
       </article>
     </div>
