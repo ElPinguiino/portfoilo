@@ -19,7 +19,12 @@ body {
 
 .navbar {
   justify-content: flex-end;
+}
 
+@media (max-width: 850px) {
+  .navbar {
+    display: none;
+  }
 }
 
 .site-logo {
@@ -29,6 +34,26 @@ body {
 .nav-item {
   color: white
 }
+
+/* Default styles for the sidebar */
+.sidebar {
+  /* Your sidebar styles here */
+}
+
+/* Media query for screen sizes below 850px */
+@media (max-width: 850px) {
+  .sidebar {
+    display: block; /* or any other value you want to use to make it visible */
+  }
+}
+
+/* Media query for screen sizes above 850px */
+@media (min-width: 851px) {
+  .sidebar {
+    display: none; /* or any other value you want to use to hide it */
+  }
+}
+
 
 .resume-button {
   background-color: transparent;
@@ -42,6 +67,7 @@ body {
   align-items: flex-start;
   width: 100%;
   margin-top: 50px;
+  background-color: gray;
 }
 
 @media (max-width: 767px) {
@@ -55,7 +81,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 45%;
+  width: 50%;
 }
 
 @media (max-width: 768px) {
@@ -69,7 +95,6 @@ body {
 .slider-item {
   cursor: pointer;
   width: 33%;
-  border-radius: 5px;
   transition: all 0.3s ease;
   color: white;
 }
@@ -81,7 +106,6 @@ body {
 .job-title {
   color: white;
   font-size: 8px;
-  font-family: "Georgia, serif";
 }
 
 
@@ -108,6 +132,7 @@ body {
 .job-summary ul {
   list-style-type: disc;
   margin-left: 20px;
+  color: white;
 }
 
 .job-summary li {
@@ -128,9 +153,12 @@ body {
   display: flex;
   width: 100%;
   margin-bottom: 5rem;
+  flex-wrap: wrap;
 }
 
 .project-section-container {
+  display: flex;
+
   flex-wrap: wrap;
 }
 
@@ -138,6 +166,16 @@ body {
   background-color: transparent;
   backdrop-filter: blur(10px); /* Adjust the blur value as desired */
   background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity value as desired */
+  width: 48%;
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 873px) {
+  .project-card {
+    width: 100%
+  }
 }
 
 .github-link {

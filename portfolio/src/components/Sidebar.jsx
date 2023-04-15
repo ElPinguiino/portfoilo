@@ -5,10 +5,7 @@ const Sidebar = ({ isOpen, toggle }) => {
   return (
     <aside className="sidebar" isOpen={isOpen} onClick={toggle}>
       <ul className="sidebar-ul">
-        {/* <i><a className="site-logo" href="/">Juan J. Aguilera</a></i> */}
-        <div className="sidebar-logo">
-
-        </div>
+        <i onClick={toggle}><FaTimes /></i>
         <li><a className='nav-item' href="#about">About</a></li>
         <li className='nav-item'><a className='nav-item' href="#experience">Experience</a></li>
         <li className='nav-item'><a className='nav-item' href="#projects">Projects</a></li>

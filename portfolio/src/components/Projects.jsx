@@ -5,8 +5,9 @@ import { BsBoxArrowUpRight } from "react-icons/bs"
 
 const Projects = () => (
   <section className="project-section" id="projects">
+    <h2 className="section-heading">Projects</h2>
     <div className="project-section-container">
-      <h2 className="section-heading">Projects</h2>
+      
       <article className="project-card">
         <div className="col-lg-6">
           <img src="" alt="Project 1" className="img-fluid" />
@@ -38,11 +39,47 @@ const Projects = () => (
           <img src="/project3.jpg" alt="Project 3" className="img-fluid" />
         </div>
         <div className="col-lg-6">
+          <h3>T-Shirt Customizer</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum odio eget massa venenatis, quis ullamcorper orci finibus.</p>
+          <p>Technologies used: Three.js, React, OpenAI API</p>
+          <a className="github-link" href="https://github.com/ElPinguiino/threejs_project" target="_blank" rel="noopener noreferrer"><VscGithubAlt></VscGithubAlt></a>
+          <a className="site-link" href="https://camisa.online" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+        </div>
+      </article>
+      <article className="project-card">
+        <div className="col-lg-6">
+          <img src="/project3.jpg" alt="Project 3" className="img-fluid" />
+        </div>
+        <div className="col-lg-6">
+          <h3>Geisha Creations</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum odio eget massa venenatis, quis ullamcorper orci finibus.</p>
+          <p>Technologies used: Python, Django, PostgreSQL</p>
+          <a className="github-link" href="https://github.com/ElPinguiino/geishacreations_ecommerce" target="_blank" rel="noopener noreferrer"><VscGithubAlt></VscGithubAlt></a>
+          <a className="site-link" href="https://www.geishacreations.shop/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+        </div>
+      </article>
+      <article className="project-card">
+        <div className="col-lg-6">
+          <img src="/project3.jpg" alt="Project 3" className="img-fluid" />
+        </div>
+        <div className="col-lg-6">
           <h3>Social Tiles</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum odio eget massa venenatis, quis ullamcorper orci finibus.</p>
           <p>Technologies used: Python, Django, PostgreSQL</p>
-          <a className="github-link" href="https://github.com/myusername/project3" target="_blank" rel="noopener noreferrer"><VscGithubAlt></VscGithubAlt></a>
+          <a className="github-link" href="https://github.com/ElPinguiino/socialmedia_app" target="_blank" rel="noopener noreferrer"><VscGithubAlt></VscGithubAlt></a>
           <a className="site-link" href="https://www.project3.com/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+        </div>
+      </article>
+      <article className="project-card">
+        <div className="col-lg-6">
+          <img src="/project3.jpg" alt="Project 3" className="img-fluid" />
+        </div>
+        <div className="col-lg-6">
+          <h3>UAE Home Search</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum odio eget massa venenatis, quis ullamcorper orci finibus.</p>
+          <p>Technologies used: Python, Django, PostgreSQL</p>
+          <a className="github-link" href="https://github.com/ElPinguiino/uaehomesearch" target="_blank" rel="noopener noreferrer"><VscGithubAlt></VscGithubAlt></a>
+          <a className="site-link" href="http://uaehomesearch.vercel.app/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
         </div>
       </article>
     </div>
