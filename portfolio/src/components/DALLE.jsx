@@ -26,7 +26,7 @@ const DALLE = () => {
 
   return (
     <section className="chat-main-container">
-      <article>
+      <article className="chat-article-container">
       <form>
       <h1>What image would you like to see?</h1>
       <textarea
@@ -42,7 +42,7 @@ const DALLE = () => {
       </form>
       </article>
       
-      <article>
+      <article className="chat-article-container">
         <img src={firstImage} alt="first-image" />
       </article>
       {/* <article>

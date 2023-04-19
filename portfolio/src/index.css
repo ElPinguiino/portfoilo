@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: #0B0B45;
   
 }
 
@@ -56,8 +56,13 @@ body {
 
 
 .resume-button {
-  background-color: transparent;
-  border-color: white;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.24);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.6px);
+-webkit-backdrop-filter: blur(3.6px);
+border: 1px solid rgba(255, 255, 255, 0.78);
 }
 
 .experience-section {
@@ -67,7 +72,12 @@ body {
   align-items: flex-start;
   width: 100%;
   margin-top: 50px;
-  background-color: gray;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.78);
 }
 
 @media (max-width: 767px) {
@@ -163,9 +173,12 @@ body {
 }
 
 .project-card {
-  background-color: transparent;
-  backdrop-filter: blur(10px); /* Adjust the blur value as desired */
-  background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity value as desired */
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.78);
   width: 48%;
   margin: 8px;
   justify-content: center;
@@ -179,8 +192,8 @@ body {
 }
 
 .github-link {
-  color: red;
-  margin: 1rem;
+  color: white;
+  margin: .5rem;
   font-size: 2rem;
   font-weight: 500;
 }
@@ -190,8 +203,8 @@ body {
 }
 
 .site-link {
-  color: red;
-  margin: 1rem;
+  color: white;
+  margin: .5rem;
   font-size: 2rem;
 }
 
@@ -273,3 +286,60 @@ body {
   background-color: #333333;
   color: #FFFFFF;
 }
+
+.contact-article {
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.24);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.6px);
+-webkit-backdrop-filter: blur(3.6px);
+border: 1px solid rgba(255, 255, 255, 0.78);
+}
+
+.chat-article-container {
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.24);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.6px);
+-webkit-backdrop-filter: blur(3.6px);
+border: 1px solid rgba(255, 255, 255, 0.78);
+}
+
+.portfolio-signature {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+}
+
+.sidebar-closed {
+  
+}
+
+.sidebar-open {
+  display: none;
+}
+
+.sidebar-menu-icon {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+@media (min-width: 851px) {
+  .sidebar-menu-icon {
+    display: none; /* or any other value you want to use to hide it */
+  }
+}
+
+.landing-section {
+  margin-top: 2rem;
+}
+
+.project-icon {
+  font-size: 2rem;
+  margin: .25rem;
+}
+
+

@@ -27,7 +27,7 @@ const Chat = () => {
 
   return (
     <section className="chat-main-container">
-      <article>
+      <article className="chat-article-container">
       <form>
       <h1>What is your question?</h1>
       <textarea
@@ -42,7 +42,7 @@ const Chat = () => {
       </button>
       </form>
       </article>
-      <article>
+      <article className="chat-article-container">
         <p>{gptResponse}</p>
       </article>
     </section>

@@ -2,8 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+  let signature = "<Juan J. Aguilera />"
+
   return (
     <nav id="navbvar" className='navbar'>
+      {/* <p>{signature}</p> */}
       <ul>
         <li><a className='nav-item' href="#about">About</a></li>
         <li className='nav-item'><a className='nav-item' href="#experience">Experience</a></li>

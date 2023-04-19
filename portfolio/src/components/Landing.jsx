@@ -2,7 +2,7 @@ import React from 'react'
 
 const Landing = () => {
   return (
-    <section>
+    <section className="landing-section">
         <p>Hello, nice to meet you</p>
         <p>My name is Juan</p>
         <p>

@@ -4,7 +4,7 @@ import DALLE from '../components/DALLE'
 
 const Playground = () => {
   return (
-    <section class="container">
+    <section class="playground-container">
         <Chat />
         <DALLE />
     </section>
