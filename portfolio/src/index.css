@@ -185,6 +185,14 @@ border: 1px solid rgba(255, 255, 255, 0.78);
   align-items: center;
 }
 
+.project-card h3 {
+  color: white;
+}
+
+.project-card p {
+  color: white;
+}
+
 @media (max-width: 873px) {
   .project-card {
     width: 100%
