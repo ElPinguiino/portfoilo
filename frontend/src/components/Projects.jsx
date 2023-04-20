@@ -1,0 +1,113 @@
+import React, { useState } from 'react';
+import { VscGithubAlt } from "react-icons/vsc";
+import { BsBoxArrowUpRight } from "react-icons/bs"
+
+import { SiDjango, SiPython, SiJavascript, SiReact, SiPostgresql, SiNginx, SiDocker, SiGunicorn, SiLinode, SiVercel, SiNextdotjs, SiRender, SiThreedotjs, SiVite, SiOpenai, SiStripe, SiInstagram, SiAmazon, SiAmazonaws, SiGithub } from "react-icons/si"
+
+
+const Projects = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
+  return (
+    <section className="project-section" id="projects">
+    <h2 className="section-heading">Projects</h2>
+    <div className="project-section-container">
+      
+      <article className={`project-card ${isFlipped ? 'flipped' : ''}`}>
+        <div className="col-lg-6 front-of-card">
+          <h3>Juan Of A Kind</h3>
+          <p>Website developed for a client with a Food Truck. Developed using DRF for the backend and React.js for the frontend.</p>
+          <p>Technologies used: </p>
+            <SiPython className="project-icon"/>
+            <SiReact className="project-icon"/>
+            <SiDjango className="project-icon"/>
+            <SiPostgresql className="project-icon"/>
+            <SiStripe className="project-icon"/>
+            <SiAmazonaws className="project-icon"/>
+          <div>
+            <p>Deployed with: Docker, Gunicorn, Nginx on a Linode VPS</p>
+            <SiNginx className="project-icon"/>
+            <SiDocker className="project-icon"/>
+            <SiGunicorn className="project-icon"/>
+            <SiLinode className="project-icon"/>
+          </div>
+          {/* <button className="flip-button" onClick={handleFlip}></button> */}
+          <a className="project-icon" href="https://juanofakind.kitchen" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+        </div>
+        {/* <div className="col-lg-6 back-of-card">
+          <p></p>
+        </div> */}
+        {/* <section id="accordions">
+        <details>
+          <summary>Use Case:</summary>
+          <p>
+            Website developed for a client with a Food Truck. The project includes informational pages for the general public, user pages to place orders and manage their as well as an administrative backend to assist with their business such as expenses, inventory, and recipes. The website is integrated with Stripe prebuilt checkout for customers to be order online.
+          </p>
+        </details>
+      </section> */}
+      </article>
+      <article className="project-card">
+        <div className="col-lg-6 order-lg-1">
+          <h3>Stephanie Johnson</h3>
+          {/* <p>Project created for a Tattoo Artist website that wanted a funnel for people to contact her and submit consultations. Instagram API was integrated in order to display their work as their portfolio. Future iterations of the site will be able to fully manage booking appointment and paying for them through the site.</p> */}
+          <p>Website developed for a local tattoo artist. Developed using DRF for the backend and React.js for the fronted.</p>
+          <p>Technologies used: </p>
+            <SiPython className="project-icon"/>
+            <SiReact className="project-icon"/>
+            <SiDjango className="project-icon"/>
+            <SiPostgresql className="project-icon"/>
+            <SiInstagram className="project-icon"/>
+          <div>
+            <p>Deployed with: Docker, Gunicorn, Nginx on a Linode VPS</p>
+            <SiNginx className="project-icon"/>
+            <SiDocker className="project-icon"/>
+            <SiGunicorn className="project-icon"/>
+            <SiLinode className="project-icon"/>
+          </div>
+          <a className="project-icon" href="https://stephaniejohnson.tattoo" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+        </div>
+      </article>
+      <article className="project-card">
+        <div className="col-lg-6">
+          <h3>CyberBuddy</h3>
+          <p>Project created for a client who sells routers that can be accessed with a simple cell line. ChatGPT3 was integrated with the clients CRM to assist customers with questions.</p>
+          <div>
+            <p>Technologies used:</p>
+            <SiReact className="project-icon"/>
+            <SiOpenai className="project-icon"/>
+            <SiVite className="project-icon"/>
+          </div>
+          <div>
+            <p>Deployed with:</p>
+            <SiVercel className="project-icon"/>
+          </div>
+          <a className="project-icon" href="https://cyber-buddy-esmoquin.vercel.app/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+        </div>
+      </article>
+      <article className="project-card">
+        <div className="col-lg-6">
+          <h3>Geisha Creations</h3>
+          <p>Online store created for a client who sells resin pieces online. Developed using Next.js and React.js as well as headless CMS</p>
+          <div>
+            <p>Technologies used:</p>
+            <SiNextdotjs className="project-icon"/>
+            <SiReact className="project-icon"/>
+          </div>
+          <div>
+            <p>Deployed with:</p>
+            <SiVercel className="project-icon"/>
+          </div>
+          <a className="project-icon" href="https://github.com/ElPinguiino/geishacreations_ecommerce" target="_blank" rel="noopener noreferrer"><SiGithub /></a>
+          <a className="project-icon" href="https://www.geishacreations.shop/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+        </div>
+      </article>
+    </div>
+  </section>
+  );
+};
+
+export default Projects
