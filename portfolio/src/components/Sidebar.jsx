@@ -23,7 +23,7 @@ const Sidebar = () => {
         <li className='nav-item'><a className='nav-item' href="#contact">Contact</a></li>
         <li className='nav-item'><button className='resume-button'><a id="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></button></li>
       </ul>
-      <ul>
+      {/* <ul>
       <li>
           <details role="list">
             <summary aria-haspopup="listbox" role="button" class="secondary">Theme</summary>
@@ -34,7 +34,7 @@ const Sidebar = () => {
               </ul>
           </details>
         </li>
-      </ul>
+      </ul> */}
     </aside>
     </>
   );
