@@ -14,6 +14,9 @@ const Contact = () => {
     return (
       <>
       <h2 className="section-heading">Contact</h2>
+      <article className="contact-article">
+        <h6>juanjaguilera1@gmail.com</h6>
+      </article>
       <article id="contact" className="contact-article">
         <form onSubmit={handleSubmit}>
         <label>

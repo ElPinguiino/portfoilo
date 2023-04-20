@@ -5,9 +5,11 @@ const DALLE = () => {
     const [firstImage, setFirstImage] = useState([])
     const [secondImage, setSecondImage] = useState([])
     const [message, setMessage] = useState("")
+    const [ariaState, setAriaState ] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setAriaState(!ariaState);
     await axios({
       method: 'POST',
       url: 'https://openai80.p.rapidapi.com/images/generations',
@@ -22,6 +24,7 @@ const DALLE = () => {
       console.log(response.data.data[0].url)
       setFirstImage(response.data.data[0].url)
     }).catch(error => console.error(error));
+    setAriaState(!ariaState);
   }
 
   return (
@@ -42,7 +45,7 @@ const DALLE = () => {
       </form>
       </article>
       
-      <article className="chat-article-container">
+      <article className="chat-article-container" aria-busy={ariaState}>
         <img src={firstImage} alt="first-image" />
       </article>
       {/* <article>

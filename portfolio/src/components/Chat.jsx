@@ -5,9 +5,12 @@ const Chat = () => {
 
     const [gptResponse, setGptResponse] = useState([])
     const [message, setMessage] = useState("")
+    const [ariaState, setAriaState ] = useState(false)
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setAriaState(!ariaState);
     await axios({
       method: 'POST',
       url: 'https://openai80.p.rapidapi.com/chat/completions',
@@ -42,7 +45,7 @@ const Chat = () => {
       </button>
       </form>
       </article>
-      <article className="chat-article-container">
+      <article className="chat-article-container" aria-busy={ariaState}>
         <p>{gptResponse}</p>
       </article>
     </section>

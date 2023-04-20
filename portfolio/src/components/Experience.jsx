@@ -9,9 +9,9 @@ const Experience = () => {
         title: "Software Engineer",
         time: "Feb 2022 - Present",
         summary: [
-          "Collaborate with customers, Project Managers, and Implementation team members to ensure timely completion of builds in accordance with specified requirements.",
-          "Ensure the proper functioning of third-party APIs and other necessary build integrations, such as Conversational AI or CRMs, by effectively integrating them into NICE CxOne's IVR software to meet the build's objectives.",
-          "Developed custom logic for processing and parsing customer data, and performed rigorous testing to ensure that the build was free of bugs, issues, or undesirable outcomes before submitting it for QA."
+          "Collaborate with customers, PMs, and team for timely builds.",
+          "Integrate third-party APIs into NICE CxOne IVR software.",
+          "Developed and tested custom logic for error-free builds."
         ]
       },
       {
@@ -19,7 +19,7 @@ const Experience = () => {
         title: "Full Stack Developer",
         time: "Mar 2021 - Present",
         summary: [
-          "Assisted senior developers with development tasks using Java and Spring Framework",
+          "In charge of developing any websites",
           "Learned new technologies and programming concepts through mentorship and self-study",
           "Contributed to codebase documentation and version control using Git and GitHub"
         ]
@@ -57,7 +57,7 @@ const Experience = () => {
           <p className='job-time'>{jobs[activeJob].time}</p>
           <ul>
             {jobs[activeJob].summary.map((point, index) => (
-              <li key={index}>{point}</li>
+              <li className='job-title' key={index}>{point}</li>
             ))}
           </ul>
         </div>
