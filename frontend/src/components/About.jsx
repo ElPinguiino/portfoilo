@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <>
+    <div className="about-main-container">
       <h2 className="section-heading">About Us</h2>
       <section id="about">
         <h5>
@@ -21,7 +21,7 @@ const About = () => {
         Thank you for considering Developing Life for your web development and design needs. As a family-owned business, we take pride in delivering high-quality results and building lasting relationships with our clients. Contact us today to see how we can help your business thrive online.
         </h5>
     </section>
-    </>
+    </div>
   )
 }
 

@@ -14,26 +14,31 @@ const Contact = () => {
     return (
       <>
       <h2 className="section-heading">Contact</h2>
+        <div className="contact-container">
       <article className="contact-article">
-        <h6>juanjaguilera1@gmail.com</h6>
+        <h6>juanaguilera@developinglife.tech</h6>
       </article>
       <article id="contact" className="contact-article">
-        <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={name} onChange={event => setName(event.target.value)} />
-        </label>
-        <label>
-          Email:
-          <input type="email" value={email} onChange={event => setEmail(event.target.value)} />
-        </label>
-        <label>
-          Message:
-          <textarea value={message} onChange={event => setMessage(event.target.value)} />
-        </label>
-        <button type="submit">Submit</button>  
+      <form>
+        <div class="grid">
+          <label htmlFor="firstname">
+            First name
+            <input type="text" id="firstname" name="firstname" placeholder="First name" required></input>
+          </label>
+          <label htmlFor="lastname">
+          Last name
+            <input type="text" id="lastname" name="lastname" placeholder="Last name" required></input>
+          </label>
+        </div>
+        <label htmlFor="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="Email address" required></input>
+        <label htmlFor="email">Phone Number</label>
+        <input type="number" id="number" name="number" placeholder="123-456-7890" required></input>
+        <small>I will be in contact ASAP!</small>
+      <button type="submit">Submit</button>
       </form>
       </article>
+      </div>
       </>
     );
 }

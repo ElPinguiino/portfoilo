@@ -10,6 +10,12 @@ import Pricing from '../components/Pricing'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isLightOn, setIsLightOn] = useState(true);
+
+  const toggleTheme = () => {
+    setIsLightOn(!isLightOn);
+  };
+
 
     const toggle = () => {
         setIsOpen(!isOpen);
@@ -20,7 +26,7 @@ const Home = () => {
     <>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css"></link>
       <Sidebar isOpen={isOpen} toggle={toggle}/>
-      <Navbar toggle={toggle}/> 
+      <Navbar isLight={isLightOn} toggleTheme={toggleTheme} /> 
       <Landing name="home"/>
       <About name="about" />
       <Projects name="projects"/>
