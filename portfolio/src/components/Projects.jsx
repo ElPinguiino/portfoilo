@@ -2,22 +2,38 @@ import React, { useState } from 'react';
 import { VscGithubAlt } from "react-icons/vsc";
 import { BsBoxArrowUpRight } from "react-icons/bs"
 
-import { SiDjango, SiPython, SiJavascript, SiReact, SiPostgresql, SiNginx, SiDocker, SiGunicorn, SiLinode, SiVercel, SiNextdotjs, SiRender, SiThreedotjs, SiVite, SiOpenai, SiStripe, SiInstagram, SiAmazon, SiAmazonaws, SiGithub } from "react-icons/si"
+import { SiDjango, SiPython, SiJavascript, SiReact, SiPostgresql, SiNginx, SiDocker, SiGunicorn, SiLinode, SiVercel, SiNextdotjs, SiRender, SiThreedotjs, SiVite, SiOpenai, SiStripe, SiInstagram, SiAmazon, SiAmazonaws, SiGithub } from "react-icons/si";
+import ReactCardFlip from 'react-card-flip';
 
 
 const Projects = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
+    const [isFlipped1, setIsFlipped1] = useState(false);
+    const [isFlipped2, setIsFlipped2] = useState(false);
+    const [isFlipped3, setIsFlipped3] = useState(false);
+    const [isFlipped4, setIsFlipped4] = useState(false);
 
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
+    const handleClick1 = () => {
+        setIsFlipped1(!isFlipped1);
+    };
+
+    const handleClick2 = () => {
+      setIsFlipped2(!isFlipped2);
+    };
+
+    const handleClick3 = () => {
+      setIsFlipped3(!isFlipped3);
+    };
+
+    const handleClick4 = () => {
+    setIsFlipped4(!isFlipped4);
+    };
 
   return (
     <section className="project-section" id="projects">
     <h2 className="section-heading">Projects</h2>
     <div className="project-section-container">
       
-      <article className={`project-card ${isFlipped ? 'flipped' : ''}`}>
+      <article className="project-card">
         <div className="col-lg-6 front-of-card">
           <h3>Juan Of A Kind</h3>
           <p>Website developed for a client with a Food Truck. Developed using DRF for the backend and React.js for the frontend.</p>
@@ -144,6 +160,33 @@ const Projects = () => {
           <a className="project-icon" href="http://uaehomesearch.vercel.app/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
         </div>
       </article>
+      {/* <ReactCardFlip isFlipped={isFlipped4} flipDirection="horizontal">
+      <article className="project-card-front">
+        <div className="col-lg-6">
+          <h3>UAE Home Search</h3>
+          <p>Project created to learn how to integrate a frontend with an external API. Takes advantage of Rapid API for the data.</p>
+          <div>
+            <p>Technologies used:</p>
+            <SiNextdotjs className="project-icon"/>
+            <SiReact className="project-icon"/>
+          </div>
+          <div>
+            <p>Deployed with:</p>
+            <SiVercel className="project-icon"/>
+          </div>
+          <a className="project-icon" href="https://github.com/ElPinguiino/uaehomesearch" target="_blank" rel="noopener noreferrer"><SiGithub /></a>
+          <a className="project-icon" href="http://uaehomesearch.vercel.app/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+          <button className="project-card-button" onClick={handleClick4}>Project Summary</button>
+        </div>
+      </article>
+      <article className="project-card-back">
+        <div className="col-lg-6">
+          <h3>UAE Home Search</h3>
+          <p>Project created to learn how to integrate a frontend with an external API. Takes advantage of Rapid API for the data.</p>
+          <button className="project-card-button" onClick={handleClick4}>Project Details</button>
+        </div>
+      </article>       
+      </ReactCardFlip> */}
     </div>
   </section>
   );
