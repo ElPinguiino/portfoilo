@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaTimes } from 'react-icons/fa';
+import { FaMoon, FaSun, FaTimes } from 'react-icons/fa';
 import { TfiMenu } from 'react-icons/tfi'
 import ThemeSwitcher from './ThemeSwitcher';
 
@@ -16,6 +16,7 @@ const Sidebar = () => {
     <>
     {/* <p className="portfolio-signature">{signature}</p> */}
     <TfiMenu className="sidebar-menu-icon" onClick={handleToggle}/>
+    <strong className="portfolio-sidebar-signature">{signature}</strong>
     <aside className={`sidebar-closed ${showSidebar ? 'sidebar-open' : ''}`}>
       <ul className="sidebar-ul">
         <li><a className='nav-item' href="#about">About</a></li>
@@ -25,17 +26,10 @@ const Sidebar = () => {
         <li className='nav-item'><button className='resume-button'><a id="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></button></li>
       </ul>
       <ul>
-        <li>
-          <details role="list">
-            <summary aria-haspopup="listbox" role="button" class="secondary">Theme</summary>
-              <ul role="listbox">
-                <li><a href="#" data-theme-switcher="light">Light</a></li>
-                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
-              </ul>
-          </details>
+          <li><a href="#" data-theme-switcher="light"><FaSun className="light-mode-icon"/></a></li>
+          <li><a href="#" data-theme-switcher="dark"><FaMoon className="dark-mode-icon"/></a></li>
+          </ul>
           <ThemeSwitcher />
-        </li>
-      </ul>
     </aside>
     </>
   );

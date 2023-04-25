@@ -13,7 +13,8 @@ const Contact = () => {
   
     return (
       <>
-      <h2 className="section-heading">Contact</h2>
+        <h2 className="section-heading">Contact</h2>
+        <section className="contact-section">
       <article className="contact-article">
         <h6>juanjaguilera1@gmail.com</h6>
       </article>
@@ -31,9 +32,10 @@ const Contact = () => {
           Message:
           <textarea value={message} onChange={event => setMessage(event.target.value)} />
         </label>
-        <button type="submit">Submit</button>  
+        <button className="contact-submit-button" type="submit">Submit</button>  
       </form>
       </article>
+      </section>
       </>
     );
 }

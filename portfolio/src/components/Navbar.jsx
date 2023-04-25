@@ -3,14 +3,15 @@ import { NavLink } from 'react-router-dom';
 import ThemeSwitcher from './ThemeSwitcher';
 import { SiSaturn } from 'react-icons/si';
 import { TbSunHigh } from 'react-icons/tb';
+import { FaMoon, FaRegMoon, FaSun } from 'react-icons/fa';
 
 const Navbar = () => {
   let signature = "<Juan J. Aguilera />"
 
   return (
     <nav id="navbvar" className='navbar'>
-      <ul className="navbar-site-name">
-        <li><strong>{signature}</strong></li>
+      <ul>
+        <li><strong className="portfolio-signature">{signature}</strong></li>
       </ul>
       <ul>
         <li><a className='nav-item' href="#about">About</a></li>
@@ -20,13 +21,16 @@ const Navbar = () => {
       </ul>
       <ul>
         <li>
-          <details role="list">
+          {/* <details role="list">
             <summary aria-haspopup="listbox" role="button" class="contrast"><TbSunHigh /></summary>
               <ul role="listbox">
-                <li><a href="#" data-theme-switcher="light">Light</a></li>
-                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+                
               </ul>
-          </details>
+          </details> */}
+          <ul>
+          <li><a href="#" data-theme-switcher="light"><FaSun className="light-mode-icon"/></a></li>
+          <li><a href="#" data-theme-switcher="dark"><FaMoon className="dark-mode-icon"/></a></li>
+          </ul>
           <ThemeSwitcher />
         </li>
         <li className='nav-item'><button className='resume-button'><a id="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></button></li>

@@ -52,6 +52,28 @@ body {
   text-shadow: black 3px 3px 3px;
 }
 
+.light-mode-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: yellow;
+  z-index: 10;
+}
+
+[data-theme=dark] .light-mode-icon {
+  color: white;
+}
+
+.dark-mode-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: lightgray;
+  z-index: 10;
+}
+
+[data-theme=dark] .dark-mode-icon {
+  color: darkgray;
+}
+
 /* Default styles for the sidebar */
 .sidebar {
   /* Your sidebar styles here */
@@ -74,12 +96,16 @@ body {
 
 .resume-button {
 /* From https://css.glass */
-background: rgba(255, 255, 255, 0.24);
+background: rgba(0, 0, 0, 0.15);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(3.6px);
 -webkit-backdrop-filter: blur(3.6px);
 border: 1px solid rgba(255, 255, 255, 0.78);
+}
+
+[data-theme=dark] .resume-button {
+  background: rgba(255, 255, 255, 0.24);
 }
 
 .experience-section {
@@ -89,12 +115,16 @@ border: 1px solid rgba(255, 255, 255, 0.78);
   align-items: flex-start;
   width: 100%;
   margin-top: 50px;
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.6px);
   -webkit-backdrop-filter: blur(3.6px);
   border: 1px solid rgba(255, 255, 255, 0.78);
+}
+
+[data-theme=dark] .experience-section{
+  background: rgba(255, 255, 255, 0.24);
 }
 
 @media (max-width: 767px) {
@@ -203,7 +233,24 @@ border: 1px solid rgba(255, 255, 255, 0.78);
 }
 
 .project-card {
+  background: rgb(0, 0, 0, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(34, 185, 17, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  width: 48%;
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-theme=dark] .project-card {
   background: rgba(255, 255, 255, 0.24);
+}
+
+.project-card-front {
+  background: black;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.6px);
@@ -215,17 +262,8 @@ border: 1px solid rgba(255, 255, 255, 0.78);
   align-items: center;
 }
 
-.project-card-front {
+[data-theme=dark] .project-card-front {
   background: rgba(255, 255, 255, 0.24);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.6px);
-  -webkit-backdrop-filter: blur(3.6px);
-  border: 1px solid rgba(255, 255, 255, 0.78);
-  width: 48%;
-  margin: 8px;
-  justify-content: center;
-  align-items: center;
 }
 
 .project-card-back {
@@ -367,14 +405,76 @@ border: 1px solid rgba(255, 255, 255, 0.78);
   color: #FFFFFF;
 }
 
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .contact-article {
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.24);
+width: 48%;
+background: rgba(0, 0, 0, 0.15);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(3.6px);
 -webkit-backdrop-filter: blur(3.6px);
 border: 1px solid rgba(255, 255, 255, 0.78);
+margin: 8px;
+color: black;
+}
+
+[data-theme=dark] .contact-article {
+  background: rgba(255, 255, 255, 0.24)
+}
+
+@media (max-width: 873px) {
+  .contact-article {
+    width: 100%
+  }
+}
+
+.contact-article h6 {
+color: black;
+}
+
+[data-theme=dark] .contact-article h6 {
+  color: white;
+}
+
+.contact-article label {
+  color: black;
+}
+
+[data-theme=dark] .contact-article label {
+  color: white;
+}
+
+.contact-article input {
+  color: black;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme=dark] .contact-article input {
+  color: white;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.contact-article textarea {
+  color: black;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme=dark] .contact-article textarea {
+  color: white;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+
+
+.contact-submit-button {
+  background: transparent;
+  color: black;
 }
 
 .chat-article-container {
@@ -388,11 +488,32 @@ border: 1px solid rgba(255, 255, 255, 0.78);
 }
 
 .portfolio-signature {
-  position: absolute;
-  left: 1.5rem;
-  top: 1.5rem;
+  color: black;
+  text-shadow: white 3px 3px 3px;
 }
 
+
+[data-theme=dark] .portfolio-signature {
+  color: white;
+  text-shadow: black 3px 3px 3px;
+}
+
+.portfolio-sidebar-signature {
+  color: black;
+  text-shadow: white 3px 3px 3px;
+}
+
+
+[data-theme=dark] .portfolio-sidebar-signature {
+  color: white;
+  text-shadow: black 3px 3px 3px;
+}
+
+@media (min-width: 851px) {
+  .portfolio-sidebar-signature {
+    display: none; /* or any other value you want to use to hide it */
+  }
+}
 .sidebar-closed {
   
 }
