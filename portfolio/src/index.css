@@ -44,12 +44,42 @@ body {
 
 .nav-item {
   color: black;
+  font-weight: 700;
   text-shadow: white 3px 3px 3px;
 }
 
 [data-theme=dark] .nav-item {
   color: white;
-  text-shadow: black 3px 3px 3px;
+  text-shadow: black 2px 2px 2px;
+}
+
+
+.theme-switcher-div{
+  background: rgba(0, 0, 0, 0.15);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.6px);
+-webkit-backdrop-filter: blur(3.6px);
+border: 1px solid rgba(255, 255, 255, 0.78);
+height: 2.5rem;
+padding: 8px;
+align-items: center;
+justify-content: center;
+display: flex;
+}
+
+.light-mode-button {
+  background: rgba(0, 0, 0, 0.15);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.6px);
+-webkit-backdrop-filter: blur(3.6px);
+border: 1px solid rgba(255, 255, 255, 0.78);
+}
+
+[data-theme=dark] .light-mode-button {
+  background: transparent;
+  border: none;
 }
 
 .light-mode-icon {
@@ -74,6 +104,20 @@ body {
   color: darkgray;
 }
 
+.dark-mode-button {
+  background: transparent;
+  border: none;
+}
+
+[data-theme=dark] .dark-mode-button {
+  background: rgba(255, 255, 255, 0.24);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.6px);
+-webkit-backdrop-filter: blur(3.6px);
+border: 1px solid rgba(255, 255, 255, 0.78);
+}
+
 /* Default styles for the sidebar */
 .sidebar {
   /* Your sidebar styles here */
@@ -95,7 +139,6 @@ body {
 
 
 .resume-button {
-/* From https://css.glass */
 background: rgba(0, 0, 0, 0.15);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -157,6 +200,10 @@ border: 1px solid rgba(255, 255, 255, 0.78);
 }
 
 .slider-item.active {
+  border-bottom: thick solid black;
+}
+
+[data-theme=dark] .slider-item.active {
   border-bottom: thick solid white;
 }
 
@@ -165,10 +212,27 @@ border: 1px solid rgba(255, 255, 255, 0.78);
   font-size: 8px;
 }
 
+.job-company {
+  color: black;
+  font-weight: 700;
+  text-shadow: white 2px 2px 2px;
+}
+
+[data-theme=dark] .job-company {
+  color: white;
+  text-shadow: black 2px 2px 2px;
+}
+
 
 .job-summary {
   width: 100%;
+  color: black;
+  text-shadow: white 2px 2px 2px;
+}
+
+[data-theme=dark] .job-summary {
   color: white;
+  text-shadow: black 2px 2px 2px;
 }
 
 .job-summary h2 {
@@ -204,6 +268,7 @@ border: 1px solid rgba(255, 255, 255, 0.78);
   margin-bottom: 10px;
   font-size: 1.2rem;
   color: black;
+  list-style-type: none;
 }
 
 [data-theme=dark] .job-summary li {
@@ -501,6 +566,10 @@ border: 1px solid rgba(255, 255, 255, 0.78);
 .portfolio-sidebar-signature {
   color: black;
   text-shadow: white 3px 3px 3px;
+  position: absolute;
+  top: 1.3rem;
+  left: 2rem;
+  
 }
 
 
@@ -515,7 +584,23 @@ border: 1px solid rgba(255, 255, 255, 0.78);
   }
 }
 .sidebar-closed {
-  
+  background: rgba(0, 0, 0, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  position: absolute;
+  top: 64px;
+  right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-right: 6px;
+}
+
+[data-theme=dark] .sidebar-closed {
+  background: rgba(255, 255, 255, 0.24);
 }
 
 .sidebar-open {
@@ -526,6 +611,11 @@ border: 1px solid rgba(255, 255, 255, 0.78);
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
+  color: black;
+}
+
+[data-theme=dark] .sidebar-menu-icon {
+  color: white;
 }
 
 @media (min-width: 851px) {
@@ -536,6 +626,22 @@ border: 1px solid rgba(255, 255, 255, 0.78);
 
 .landing-section {
   margin-top: 2rem;
+}
+
+.landing-section p {
+  color: black;
+}
+
+[data-theme=dark] .landing-section p {
+  color: white;
+}
+
+.about-section p {
+  color: black;
+}
+
+[data-theme=dark] .about-section p {
+  color: white;
 }
 
 .project-icon {
@@ -569,33 +675,6 @@ border: 1px solid rgba(255, 255, 255, 0.78);
 	margin: 0 0 0 -20em;
 }
 
-.signature span {
-
-  font: 700 1em/1 "Oswald", sans-serif;
-  letter-spacing: 0;
-  padding: .25em 0 .325em;
-  display: block;
-  margin: 0 auto;
-  text-shadow: 0 0 80px rgba(255,255,255,.5);
-
-/* Clip Background Image */
-
-  background: url('gradient.png') repeat-y;
-  -webkit-background-clip: text;
-  background-clip: text;
-
-/* Animate Background Image */
-
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: aitf 80s linear infinite;
-
-/* Activate hardware acceleration for smoother animations */
-
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-backface-visibility: hidden;
-
-}
-
 /* Animate Background Image */
 
 @-webkit-keyframes aitf {
@@ -607,10 +686,11 @@ border: 1px solid rgba(255, 255, 255, 0.78);
 [data-theme=light],
 :root:not([data-theme=dark]) {
   color-scheme: light;
-  background-color: #FFFFFF;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23B8A99D' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fdfdfd' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23fbfbfb' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23f9f9f9' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23f7f7f7' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23f5f5f5' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23f3f3f3' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23f1f1f1' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23efefef' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23ededed' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23ebebeb' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23e9e9e9' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23e7e7e7' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23e5e5e5' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23e3e3e3' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23e1e1e1' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23dfdfdf' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23DDDDDD' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23000000' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23131313' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%231f1f1f' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%232b2b2b' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23383838' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23454545' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23535353' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23616161' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23707070' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%237e7e7e' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%238d8d8d' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%239d9d9d' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23adadad' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23bdbdbd' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23cdcdcd' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23dddddd' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23eeeeee' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
+  
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -630,4 +710,47 @@ border: 1px solid rgba(255, 255, 255, 0.78);
     background-attachment: fixed;
     background-size: cover;
     font-family: 'inconsalata';
+}
+
+.top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0, 0, 0, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: white solid 1px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 3rem;
+  height: 4rem;
+  border-radius: 20px;
+}
+
+[data-theme=dark] .top-button {
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.78);
+}
+
+.top-button.show {
+  opacity: 1;
+}
+
+.top-button-icon {
+  font-size: 1.5rem;
+}
+
+[data-theme=dark] .top-button-icon {
+
 }

@@ -4,7 +4,7 @@ class ThemeSwitcher extends Component {
   // Config
   _scheme = "auto";
   menuTarget = "details[role='list']";
-  buttonsTarget = "a[data-theme-switcher]";
+  buttonsTarget = "button[data-theme-switcher]";
   buttonAttribute = "data-theme-switcher";
   rootAttribute = "data-theme";
   localStorageKey = "picoPreferredColorScheme";

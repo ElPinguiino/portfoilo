@@ -20,6 +20,7 @@ const Navbar = () => {
         <li className='nav-item'><a className='nav-item' href="#contact">Contact</a></li>
       </ul>
       <ul>
+      <li className='nav-item'><button className='resume-button'><a id="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></button></li>
         <li>
           {/* <details role="list">
             <summary aria-haspopup="listbox" role="button" class="contrast"><TbSunHigh /></summary>
@@ -28,12 +29,13 @@ const Navbar = () => {
               </ul>
           </details> */}
           <ul>
-          <li><a href="#" data-theme-switcher="light"><FaSun className="light-mode-icon"/></a></li>
-          <li><a href="#" data-theme-switcher="dark"><FaMoon className="dark-mode-icon"/></a></li>
+            <button className="light-mode-button" href="#" data-theme-switcher="light"><FaSun className="light-mode-icon"/></button>
+            <button className="dark-mode-button" href="#" data-theme-switcher="dark"><FaMoon className="dark-mode-icon"/></button>
+            {/* <li><a href="#" data-theme-switcher="light"><FaSun className="light-mode-icon"/></a></li>
+            <li><a href="#" data-theme-switcher="dark"><FaMoon className="dark-mode-icon"/></a></li> */}
           </ul>
           <ThemeSwitcher />
         </li>
-        <li className='nav-item'><button className='resume-button'><a id="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></button></li>
       </ul>
     </nav>
   );
