@@ -6,9 +6,9 @@ const Landing = () => {
     <section className="landing-section">
         <p>Hello!</p>
         <p>
-            My name is Juan, I am a Software Engineer with a background in IT Support and Administration.
+            My name is Juan, welcome to my online portfolio! Take a look around and let me know what you think.
         </p>
-        <img src="avatar.png" alt="Project 1" className="img-fluid" />
+        <img src="jja.png" alt="Project 1" className="img-fluid avatar-image" />
         <br />
         <a href='https://github.com/ElPinguiino'><SiGithub className='icon-link'/></a>
         <a href='https://www.linkedin.com/in/juan-aguilera-97b945b9/'><SiLinkedin className='icon-link'/></a>

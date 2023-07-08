@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { SiGithub, SiGitlab, SiLinkedin } from 'react-icons/si'
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -16,7 +17,11 @@ const Contact = () => {
         <h2 className="section-heading">Contact</h2>
         <section className="contact-section">
       <article className="contact-article">
-        <h6>juanjaguilera1@gmail.com</h6>
+        <p>If you want to chat, drop me a line! I'm always interested in speaking about a new project or opportunity.</p>
+        <p>juanjaguilera1@gmail.com</p>
+        <a href='https://github.com/ElPinguiino'><SiGithub className='icon-link'/></a>
+        <a href='https://www.linkedin.com/in/juan-aguilera-97b945b9/'><SiLinkedin className='icon-link'/></a>
+        <a href='https://gitlab.com/ElPinguiino'><SiGitlab className='icon-link'/></a>
       </article>
       <article id="contact" className="contact-article">
         <form onSubmit={handleSubmit}>

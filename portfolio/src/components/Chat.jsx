@@ -7,7 +7,6 @@ const Chat = () => {
     const [message, setMessage] = useState("")
     const [ariaState, setAriaState ] = useState(false)
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setAriaState(!ariaState);
