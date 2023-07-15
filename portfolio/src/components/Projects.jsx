@@ -123,7 +123,7 @@ const Projects = () => {
             <SiVercel className="project-icon"/>
           </div>
           <a className="project-icon" href="https://github.com/ElPinguiino/geishacreations_ecommerce" target="_blank" rel="noopener noreferrer"><SiGithub /></a>
-          <a className="project-icon" href="https://www.geishacreations.shop/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+          <a className="project-icon" href="https://geishacreations-ecommerce.vercel.app/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
         </div>
       </article>
       <article className="project-card">
@@ -140,7 +140,7 @@ const Projects = () => {
             <SiVercel className="project-icon"/>
           </div>
           <a className="project-icon" href="https://github.com/ElPinguiino/socialmedia_app" target="_blank" rel="noopener noreferrer"><SiGithub /></a>
-          <a className="project-icon" href="https://www.project3.com/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+          <a className="project-icon" href="https://socialtiles.netlify.app/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
         </div>
       </article>
       <article className="project-card">

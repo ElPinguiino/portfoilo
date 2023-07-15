@@ -17,7 +17,9 @@ const Contact = () => {
         <h2 className="section-heading">Contact</h2>
         <section className="contact-section">
       <article className="contact-article">
-        <p>If you want to chat, drop me a line! I'm always interested in speaking about a new project or opportunity.</p>
+        <p>Thank you for taking the time to see my portfolio. 
+          <br />
+          If you want to chat, drop me a line!</p>
         <p>juanjaguilera1@gmail.com</p>
         <a href='https://github.com/ElPinguiino'><SiGithub className='icon-link'/></a>
         <a href='https://www.linkedin.com/in/juan-aguilera-97b945b9/'><SiLinkedin className='icon-link'/></a>

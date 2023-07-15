@@ -9,8 +9,8 @@ const Experience = () => {
         title: "Software Engineer",
         time: "Feb 2022 - Present",
         summary: [
-          "Collaborate with customers, PMs, and team for timely builds.",
-          "Integrate third-party APIs into NICE CxOne IVR software.",
+          "Collaborate with customers, PMs, and stakeholders in order to ensure the proper documentation and development of IVR software to meet customer requirements.",
+          "Integrate Salesforce, CRM Software, and third-party APIs into NICE CxOne IVR software.",
           "Developed and tested custom logic for error-free builds."
         ]
       },
@@ -19,7 +19,7 @@ const Experience = () => {
         title: "Full Stack Developer",
         time: "Mar 2021 - Present",
         summary: [
-          "In charge of developing any websites",
+          "In charge of Design and Development of client websites ",
           "Learned new technologies and programming concepts through mentorship and self-study",
           "Contributed to codebase documentation and version control using Git and GitHub"
         ]
@@ -29,9 +29,9 @@ const Experience = () => {
         title: "Tech Support Engineer 2",
         time: "Dec 2014 - Jan 2022",
         summary: [
-          "Delivered technical assistance to enterprise customers encountering issues with ViPR, a SaaS product.",
+          "Delivered technical assistance to enterprise customers encountering issues with ViPR, a SaaS product for IT infrastructure orchestration.",
           "Escalated any issues that could not be solved by myself as well as any bugs found during troubleshooting to Engineering by creating a Jira and coordinating the subsequent actions between the customer and Engineering.",
-          "Presented findings and recommendations to senior management"
+          "Presented findings and recommendations to senior management in order to resolve the customers issues."
         ]
       }
     ];
