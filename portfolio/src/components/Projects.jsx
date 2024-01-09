@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { VscGithubAlt } from "react-icons/vsc";
 import { BsBoxArrowUpRight } from "react-icons/bs"
 
-import { SiDjango, SiPython, SiJavascript, SiReact, SiPostgresql, SiNginx, SiDocker, SiGunicorn, SiLinode, SiVercel, SiNextdotjs, SiRender, SiThreedotjs, SiVite, SiOpenai, SiStripe, SiInstagram, SiAmazon, SiAmazonaws, SiGithub } from "react-icons/si";
+import { SiDjango, SiPython, SiJavascript, SiReact, SiPostgresql, SiNginx, SiDocker, SiGunicorn, SiVercel, SiNextdotjs, SiRender, SiThreedotjs, SiVite, SiOpenai, SiStripe, SiInstagram, SiAmazon, SiAmazonaws, SiGithub } from "react-icons/si";
+import { SiSanity } from "react-icons/si";
 import ReactCardFlip from 'react-card-flip';
 
 
@@ -49,7 +50,6 @@ const Projects = () => {
             <SiNginx className="project-icon"/>
             <SiDocker className="project-icon"/>
             <SiGunicorn className="project-icon"/>
-            <SiLinode className="project-icon"/>
           </div>
           {/* <button className="flip-button" onClick={handleFlip}></button> */}
           <a className="project-icon" href="https://github.com/esmoquin/django-react-docker-joak" target="_blank" rel="noopener noreferrer"><SiGithub /></a>
@@ -69,44 +69,33 @@ const Projects = () => {
       </article>
       <article className="project-card">
         <div className="col-lg-6 order-lg-1">
-          <h3>Stephanie Johnson</h3>
+          <h3>ComCom Kitchen</h3>
           {/* <p>Project created for a Tattoo Artist website that wanted a funnel for people to contact her and submit consultations. Instagram API was integrated in order to display their work as their portfolio. Future iterations of the site will be able to fully manage booking appointment and paying for them through the site.</p> */}
-          <p>Website developed for a local tattoo artist. Developed using DRF for the backend and React.js for the fronted.</p>
+          <p>Website developed for a local commissary kitchen. Developed using React and Sanity.</p>
           <p>Technologies used: </p>
-            <SiPython className="project-icon"/>
             <SiReact className="project-icon"/>
-            <SiDjango className="project-icon"/>
-            <SiPostgresql className="project-icon"/>
-            <SiInstagram className="project-icon"/>
           <div>
-            <p>Deployed with: Docker, Gunicorn, Nginx on a Linode VPS</p>
-            <SiNginx className="project-icon"/>
-            <SiDocker className="project-icon"/>
-            <SiGunicorn className="project-icon"/>
-            <SiLinode className="project-icon"/>
+            <p>Deployed with:</p>
+            <SiSanity className="project-icon"/>
+            <SiVercel className="project-icon"/>
           </div>
-          <a className="project-icon" href="https://github.com/esmoquin/sj_front" target="_blank" rel="noopener noreferrer"><SiGithub /></a>
-          <a className="project-icon" href="https://stephaniejohnson.tattoo" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+          <a className="project-icon" href="https://comcomkitchen.vercel.app/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
         </div>
       </article>
       <article className="project-card">
         <div className="col-lg-6">
-          <h3>T-Shirt Customizer</h3>
-          <p>Project created to learn the basics of Three.js and make use of DALL-E by OpenAI</p>
+          <h3>Block Party 300</h3>
+          <p>Website developed for Block Party 300, a local event space and commissary kitchen by Granato's.</p>
           <div>
             <p>Technologies used:</p>
             <SiReact className="project-icon"/>
-            <SiThreedotjs className="project-icon"/>
-            <SiOpenai className="project-icon"/>
-            <SiVite className="project-icon"/>
           </div>
           <div>
             <p>Deployed with:</p>
-            <SiRender className="project-icon"/>
+            <SiSanity className="project-icon"/>
             <SiVercel className="project-icon"/>
           </div>
-          <a className="project-icon" href="https://github.com/ElPinguiino/threejs_project" target="_blank" rel="noopener noreferrer"><SiGithub /></a>
-          <a className="project-icon" href="https://camisa.online" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
+          <a className="project-icon" href="https://www.blockparty300.com/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
         </div>
       </article>
       <article className="project-card">
@@ -160,33 +149,6 @@ const Projects = () => {
           <a className="project-icon" href="http://uaehomesearch.vercel.app/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
         </div>
       </article>
-      {/* <ReactCardFlip isFlipped={isFlipped4} flipDirection="horizontal">
-      <article className="project-card-front">
-        <div className="col-lg-6">
-          <h3>UAE Home Search</h3>
-          <p>Project created to learn how to integrate a frontend with an external API. Takes advantage of Rapid API for the data.</p>
-          <div>
-            <p>Technologies used:</p>
-            <SiNextdotjs className="project-icon"/>
-            <SiReact className="project-icon"/>
-          </div>
-          <div>
-            <p>Deployed with:</p>
-            <SiVercel className="project-icon"/>
-          </div>
-          <a className="project-icon" href="https://github.com/ElPinguiino/uaehomesearch" target="_blank" rel="noopener noreferrer"><SiGithub /></a>
-          <a className="project-icon" href="http://uaehomesearch.vercel.app/" target="_blank" rel="noopener noreferrer"><BsBoxArrowUpRight></BsBoxArrowUpRight></a>
-          <button className="project-card-button" onClick={handleClick4}>Project Summary</button>
-        </div>
-      </article>
-      <article className="project-card-back">
-        <div className="col-lg-6">
-          <h3>UAE Home Search</h3>
-          <p>Project created to learn how to integrate a frontend with an external API. Takes advantage of Rapid API for the data.</p>
-          <button className="project-card-button" onClick={handleClick4}>Project Details</button>
-        </div>
-      </article>       
-      </ReactCardFlip> */}
     </div>
   </section>
   );
